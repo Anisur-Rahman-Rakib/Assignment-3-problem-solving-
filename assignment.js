@@ -41,6 +41,32 @@ console.log(woodResult);
 // Q3.
 // brickCalculator ....Problem Solve
 
+function brickCalculator(floorNum){
+    
+    if(floorNum <=10){
+        floorBrickCount = 15 * 1000 ;
+      }
+         else if(floorNum >10 && floorNum <=20){
+          floorBrickCount = 12 * 1000 ;
+       }
+          else{
+              floorBrickCount = 10 * 1000 ;
+          }
+         
+          total = floorNum * floorBrickCount + '  ' +'Brick';
+        
+          return total;
+
+}
+
+
+//Program Run. For Output Test....
+
+
+let brickresult = brickCalculator(21);
+
+console.log(brickresult);
+
 
 
 
@@ -51,9 +77,14 @@ console.log(woodResult);
 function tniFriend(num){
     var smallStrinInArray = num[0];
     for(i = 0; i < num.length; i++){
+        if (typeof num[i] ==='undefined'){
+            return "distance cannot be negative"; 
+        }
+        
 if(num[i].length < smallStrinInArray.length){
     smallStrinInArray = num[i];
 }
+
     }
     return smallStrinInArray;
 }
@@ -61,5 +92,5 @@ if(num[i].length < smallStrinInArray.length){
 //Program Run. For Output Test....
 
 
-var view = tniFriend(['Anis' , 'Mohammod' , 'Rakib' ,  'Anisur' , 'Rahman' , 'Rakib']);
-console.log(view);
+var viewResult = tniFriend(['Anis' ,  'Mohammod' , 'Rakib' ,  'Anisur' , 'Rahman' , 'Rakib']);
+console.log(viewResult);
